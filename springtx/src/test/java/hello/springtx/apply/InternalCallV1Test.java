@@ -63,7 +63,7 @@ public class InternalCallV1Test {
         public void external() {
             log.info("call external");
             printTxInfo();
-            internal();
+            internal(); //@Transactional self-invocation (in effect, a method within the target object calling another method of the target object) does not lead to an actual transaction at runtime
         }
 
         @Transactional
