@@ -28,6 +28,8 @@ public class InternalCallV1Test {
     }
 
     /*
+        대상 객체의 내부에서 메서드 호출이 발생하면 프록시를 거치지 않고 대상 객체를 직접호출하는 문제가 발생
+
         여기가 중요
         external() 내에서 internal() 호출했을 때, 트랜잭션이 적용되지 않았다
         external()은 트랜잭션이 없지만, internal()은 있다. 근데 적용이 안된다.
